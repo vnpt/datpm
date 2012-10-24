@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2012 10:01:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Donviquanly" table="donviquanly" catalog="quanlycanbo">
+        <id name="iddonviquanly" type="java.lang.Integer">
+            <column name="iddonviquanly" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="khoidonviquanly" class="model.Khoidonviquanly" fetch="select">
+            <column name="idkhoidonviquanly" />
+        </many-to-one>
+        <property name="ten" type="string">
+            <column name="ten" length="200" />
+        </property>
+        <property name="nhiemvu" type="string">
+            <column name="nhiemvu" />
+        </property>
+        <property name="chucnang" type="string">
+            <column name="chucnang" />
+        </property>
+        <property name="diachitruso" type="string">
+            <column name="diachitruso" length="200" />
+        </property>
+        <property name="dienthoai" type="string">
+            <column name="dienthoai" length="200" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="200" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="200" />
+        </property>
+        <property name="duongdananh" type="string">
+            <column name="duongdananh" length="200" />
+        </property>
+        <set fetch="join" lazy="false" name="phongbans" inverse="true">
+            <key>
+                <column name="iddonviquanly" not-null="true" />
+            </key>
+            <one-to-many class="model.Phongban" />
+        </set>
+        <set fetch="join" lazy="false" name="soyeulylichs" inverse="true">
+            <key>
+                <column name="iddonviquanly" />
+            </key>
+            <one-to-many class="model.Soyeulylich" />
+        </set>
+    </class>
+</hibernate-mapping>

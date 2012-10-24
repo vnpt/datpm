@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="quanlycanbo"/>
+  <table-filter match-name="danhhieu"/>
+  <table-filter match-name="capuy"/>
+  <table-filter match-name="hocvi"/>
+  <table-filter match-name="ngachluong"/>
+  <table-filter match-name="dienbienluong"/>
+  <table-filter match-name="giaoducphothong"/>
+  <table-filter match-name="phanquyen"/>
+  <table-filter match-name="hesoluong"/>
+  <table-filter match-name="quocgia"/>
+  <table-filter match-name="dantoc"/>
+  <table-filter match-name="dienbienhocham"/>
+  <table-filter match-name="donviquanly"/>
+  <table-filter match-name="quatrinhdinuocngoai"/>
+  <table-filter match-name="dienbienhocvi"/>
+  <table-filter match-name="chucvu"/>
+  <table-filter match-name="tongiao"/>
+  <table-filter match-name="soyeulylich"/>
+  <table-filter match-name="xuatthan"/>
+  <table-filter match-name="hocham"/>
+  <table-filter match-name="quatrinhnghiencuu"/>
+  <table-filter match-name="sachxuatban"/>
+  <table-filter match-name="phongban"/>
+  <table-filter match-name="khoidonviquanly"/>
+
+</hibernate-reverse-engineering>

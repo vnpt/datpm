@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2012 10:01:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Soyeulylich" table="soyeulylich" catalog="quanlycanbo">
+        <id name="idsoyeulylich" type="java.lang.Integer">
+            <column name="idsoyeulylich" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="capuy" class="model.Capuy" fetch="select">
+            <column name="idcapuy" />
+        </many-to-one>
+        <many-to-one name="phongban" class="model.Phongban" fetch="select">
+            <column name="idphongban" />
+        </many-to-one>
+        <many-to-one name="danhhieu" class="model.Danhhieu" fetch="select">
+            <column name="iddanhhieu" />
+        </many-to-one>
+        <many-to-one name="xuatthan" class="model.Xuatthan" fetch="select">
+            <column name="idxuatthan" />
+        </many-to-one>
+        <many-to-one name="hocham" class="model.Hocham" fetch="select">
+            <column name="idhocham" />
+        </many-to-one>
+        <many-to-one name="hocvi" class="model.Hocvi" fetch="select">
+            <column name="idhocvi" />
+        </many-to-one>
+        <many-to-one name="phanquyen" class="model.Phanquyen" fetch="select">
+            <column name="idphanquyen" />
+        </many-to-one>
+        <many-to-one name="chucvu" class="model.Chucvu" fetch="select">
+            <column name="idchucvu" />
+        </many-to-one>
+        <many-to-one name="tongiao" class="model.Tongiao" fetch="select">
+            <column name="idtongiao" />
+        </many-to-one>
+        <many-to-one name="hesoluong" class="model.Hesoluong" fetch="select">
+            <column name="idhesoluong" />
+        </many-to-one>
+        <many-to-one name="dantoc" class="model.Dantoc" fetch="select">
+            <column name="iddantoc" />
+        </many-to-one>
+        <many-to-one name="donviquanly" class="model.Donviquanly" fetch="select">
+            <column name="iddonviquanly" />
+        </many-to-one>
+        <many-to-one name="giaoducphothong" class="model.Giaoducphothong" fetch="select">
+            <column name="idgiaoducphothong" />
+        </many-to-one>
+        <property name="tendangnhap" type="string">
+            <column name="tendangnhap" length="200" not-null="true" />
+        </property>
+        <property name="matkhau" type="string">
+            <column name="matkhau" length="200" not-null="true" />
+        </property>
+        <property name="sohieucongchuc" type="java.lang.Integer">
+            <column name="sohieucongchuc" />
+        </property>
+        <property name="chungminhnhandan" type="string">
+            <column name="chungminhnhandan" length="200" />
+        </property>
+        <property name="hoten" type="string">
+            <column name="hoten" length="200" />
+        </property>
+        <property name="gioitinh" type="string">
+            <column name="gioitinh" length="200" />
+        </property>
+        <property name="duongdananh" type="string">
+            <column name="duongdananh" length="200" />
+        </property>
+        <property name="tenthuongdung" type="string">
+            <column name="tenthuongdung" length="200" />
+        </property>
+        <property name="ngaysinh" type="timestamp">
+            <column name="ngaysinh" length="19" />
+        </property>
+        <property name="noisinh" type="string">
+            <column name="noisinh" length="200" />
+        </property>
+        <property name="quequan" type="string">
+            <column name="quequan" length="200" />
+        </property>
+        <property name="noiohiennay" type="string">
+            <column name="noiohiennay" length="200" />
+        </property>
+        <property name="sodienthoai" type="string">
+            <column name="sodienthoai" length="200" />
+        </property>
+        <property name="ngayvaodangdubi" type="string">
+            <column name="ngayvaodangdubi" length="200" />
+        </property>
+        <property name="ngayvaodangchinhthuc" type="string">
+            <column name="ngayvaodangchinhthuc" length="200" />
+        </property>
+        <property name="tencntn1" type="string">
+            <column name="tencntn1" length="200" />
+        </property>
+        <property name="namtn1" type="string">
+            <column name="namtn1" length="200" />
+        </property>
+        <property name="tencntn2" type="string">
+            <column name="tencntn2" length="200" />
+        </property>
+        <property name="namtn2" type="string">
+            <column name="namtn2" length="200" />
+        </property>
+        <property name="tencntn3" type="string">
+            <column name="tencntn3" length="200" />
+        </property>
+        <property name="namtn3" type="string">
+            <column name="namtn3" length="200" />
+        </property>
+        <property name="idquocgia" type="java.lang.Integer">
+            <column name="idquocgia" />
+        </property>
+        <property name="ngaycapnhat" type="timestamp">
+            <column name="ngaycapnhat" length="19" />
+        </property>
+        <set fetch="join" lazy="false" name="quatrinhnghiencuus" inverse="true">
+            <key>
+                <column name="idsoyeulylich" not-null="true" />
+            </key>
+            <one-to-many class="model.Quatrinhnghiencuu" />
+        </set>
+        <set fetch="join" lazy="false" name="dienbienhocvis" inverse="true">
+            <key>
+                <column name="idsoyeulylich" not-null="true" />
+            </key>
+            <one-to-many class="model.Dienbienhocvi" />
+        </set>
+        <set fetch="join" lazy="false" name="quatrinhdinuocngoais" inverse="true">
+            <key>
+                <column name="idsoyeulylich" not-null="true" />
+            </key>
+            <one-to-many class="model.Quatrinhdinuocngoai" />
+        </set>
+        <set fetch="join" lazy="false" name="dienbienluongs" inverse="true">
+            <key>
+                <column name="idsoyeulylich" not-null="true" />
+            </key>
+            <one-to-many class="model.Dienbienluong" />
+        </set>
+        <set fetch="join" lazy="false" name="dienbienhochams" inverse="true">
+            <key>
+                <column name="idsoyeulylich" not-null="true" />
+            </key>
+            <one-to-many class="model.Dienbienhocham" />
+        </set>
+        <set fetch="join" lazy="false" name="sachxuatbans" inverse="true">
+            <key>
+                <column name="idsoyeulylich" not-null="true" />
+            </key>
+            <one-to-many class="model.Sachxuatban" />
+        </set>
+    </class>
+</hibernate-mapping>

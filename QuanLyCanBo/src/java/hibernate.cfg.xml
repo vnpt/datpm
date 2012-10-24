@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/quanlycanbo</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">tuanvinh</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+   
+    <mapping resource="model/Dienbienhocvi.hbm.xml"/>
+    <mapping resource="model/Dantoc.hbm.xml"/>
+    <mapping resource="model/Hocham.hbm.xml"/>
+    <mapping resource="model/Sachxuatban.hbm.xml"/>
+    <mapping resource="model/Chucvu.hbm.xml"/>
+    <mapping resource="model/Dienbienhocham.hbm.xml"/>
+    <mapping resource="model/Donviquanly.hbm.xml"/>
+    <mapping resource="model/Quocgia.hbm.xml"/>
+    <mapping resource="model/Tongiao.hbm.xml"/>
+    <mapping resource="model/Phongban.hbm.xml"/>
+    <mapping resource="model/Quatrinhdinuocngoai.hbm.xml"/>
+    <mapping resource="model/Khoidonviquanly.hbm.xml"/>
+    <mapping resource="model/Danhhieu.hbm.xml"/>
+    <mapping resource="model/Hocvi.hbm.xml"/>
+    <mapping resource="model/Giaoducphothong.hbm.xml"/>
+    <mapping resource="model/Phanquyen.hbm.xml"/>
+    <mapping resource="model/Capuy.hbm.xml"/>
+    <mapping resource="model/Hesoluong.hbm.xml"/>
+    <mapping resource="model/Xuatthan.hbm.xml"/>
+    <mapping resource="model/Ngachluong.hbm.xml"/>
+    <mapping resource="model/Dienbienluong.hbm.xml"/>
+    <mapping resource="model/Soyeulylich.hbm.xml"/>
+    <mapping resource="model/Quatrinhnghiencuu.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
